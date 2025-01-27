@@ -138,7 +138,7 @@ const MobileNavbar = ({ user }) => {
         <nav className="flex flex-col space-y-4">
           <Link to="/mylearning">My Learning</Link>
           <Link to="/profile">Edit Profile</Link>
-          <p onClick={logoutHandler}>Log out</p>
+          <p>Log out</p>
         </nav>
         {user?.role === "instructor" && (
           <SheetFooter>
