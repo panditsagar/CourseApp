@@ -105,7 +105,9 @@ function Navbar() {
         </div>
       </div>
       <div className="flex md:hidden items-center justify-between px-4 h-full">
-        <h1 className="font-extrabold text-2xl">TechLearn</h1>
+        <h1 className="font-extrabold text-2xl">
+          <Link to="/">TechLearn</Link>
+        </h1>
         <MobileNavbar user={user} />
       </div>
     </div>
@@ -115,7 +117,19 @@ function Navbar() {
 export default Navbar;
 
 const MobileNavbar = ({ user }) => {
+  const [logoutUser, { data, isSuccess }] = useLogoutUserMutation();
   const navigate = useNavigate();
+  const logoutHandler = async () => {
+    await logoutUser();
+  };
+
+  useEffect(() => {
+    if (isSuccess) {
+      toast.success(data.message || "User Log out.");
+      navigate("/login");
+    }
+  }, [isSuccess]);
+
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -138,7 +152,7 @@ const MobileNavbar = ({ user }) => {
         <nav className="flex flex-col space-y-4">
           <Link to="/mylearning">My Learning</Link>
           <Link to="/profile">Edit Profile</Link>
-          <p>Log out</p>
+          <p onClick={logoutHandler}>Log out</p>
         </nav>
         {user?.role === "instructor" && (
           <SheetFooter>
