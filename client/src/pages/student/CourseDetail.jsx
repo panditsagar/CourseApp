@@ -39,7 +39,7 @@ const CourseDetail = () => {
       <div className="bg-gradient-to-r from-blue-600 to-indigo-800 dark:from-gray-800 dark:to-gray-900 text-white">
         <div className="max-w-7xl mx-auto py-8 px-4 md:px-8 flex flex-col gap-2">
           <h1 className="font-bold text-2xl md:text-4xl">{course?.courseTitle}</h1>
-          <p className="text-base md:text-lg">{course?.courseSubTitle}</p>
+          <p className="text-base md:text-lg">{course?.subTitle}</p>
           <p>
             Created By{" "}
             <span className="text-blue-300 underline italic">
