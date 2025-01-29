@@ -27,4 +27,4 @@ CourseApp is a full-stack web application designed for seamless e-learning exper
 
 ## Live Demo
 
-Explore the live version of CourseApp: [CourseApp Demo](https://courseapp-famu.onrender.com)
+Explore the live version of CourseApp: [CourseApp Demo](https://courseapp-famu.onrender.com/)
