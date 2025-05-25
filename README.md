@@ -14,7 +14,6 @@ CourseApp is a full-stack web application designed for seamless e-learning exper
 ### Frontend
 - **React**: JavaScript library for building user interfaces.
 - **Redux Toolkit**: For efficient and scalable state management.
-- **HTML, CSS, JavaScript**: Core web technologies for styling and scripting.
 - **Tailwind CSS, shadcn/ui**: For responsive and mobile-first design.
 
 ### Backend
